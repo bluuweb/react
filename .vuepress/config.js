@@ -16,7 +16,8 @@ module.exports = {
     sidebar:
       [
         '/',
-        '/hooks/'
+        '/hooks/',
+        '/jsx/'
       ]
   }
  
