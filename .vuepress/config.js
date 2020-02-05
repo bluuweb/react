@@ -17,7 +17,8 @@ module.exports = {
       [
         '/',
         '/hooks/',
-        '/jsx/'
+        '/jsx/',
+        '/formularios/',
       ]
   }
  

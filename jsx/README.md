@@ -1,6 +1,8 @@
 # JSX
 Se llama JSX, y es una extensión de la sintaxis de JavaScript. Recomendamos usarlo con React para describir cómo debería ser la interfaz de usuario. JSX puede recordarte a un lenguaje de plantillas, pero viene con todo el poder de JavaScript.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TKHrZ3AItHY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ```js
 const element = <h1>Hello, world!</h1>;
 ```
@@ -132,7 +134,7 @@ export default Listas;
 
 Concatenar Array
 ```js
-onst arrayUno = ['Chile', 'Argentina']
+const arrayUno = ['Chile', 'Argentina']
 const arrayDos = ['Perú', 'Mexico']
 
 const Unidos = [...arrayUno, ...arrayDos]
