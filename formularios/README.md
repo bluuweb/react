@@ -114,4 +114,207 @@ const enviarDatos = (event) => {
 }
 ```
 
+## React Hook Form
+[https://react-hook-form.com/get-started](https://react-hook-form.com/get-started)
+
+#### Instalación
+```
+npm install react-hook-form
+```
+
+#### Utilización
+```js{2}
+import React, {Fragment} from 'react'
+import { useForm } from 'react-hook-form'
+
+const HookForm = () => {
+
+    const {register, errors, handleSubmit} = useForm();
+
+    const onSubmit = (data) => {
+        console.log(data)
+    }
+
+    return (
+        <Fragment>
+            <h2>Hooks Forms</h2>
+            <form onSubmit={handleSubmit(onSubmit)}>
+                <input
+                    placeholder="Ingrese nombre de usuario"
+                    className="form-control mb-2"
+                    name="usuario"
+                    ref={register({
+                        required: {
+                            value: true, 
+                            message: 'Nombre es requerido'
+                            }, 
+                        maxLength: {
+                            value: 5, 
+                            message: 'No más de 5 carácteres!'
+                            },
+                        minLength: {
+                            value: 2, 
+                            message: 'Mínimo 2 carácteres'
+                            }
+                    })}
+                ></input>
+                <button type="submit" className="btn btn-primary">
+                    Enviar
+                </button>
+            </form>
+            
+        </Fragment>
+    );
+}
+ 
+export default HookForm;
+```
+
+#### onSubmit
+Uno de los conceptos clave en el formulario React Hook, es pasar su componente no controlado en el gancho. Esto hará que su valor esté disponible tanto para la validación como para el envío del formulario. register
+```js
+const onSubmit = (data) => {
+    console.log(data)
+}
+
+// En el formulario
+<form onSubmit={handleSubmit(onSubmit)}>
+```
+
+#### Validación
+Muy importante pasar el atributo "name" con clave única.
+
+Pasamos ref con "register" y sus respectivas validaciones:
+```js
+<input
+    placeholder="Ingrese nombre de usuario"
+    className="form-control mb-2"
+    name="usuario"
+    ref={
+        register({
+            required: {
+                value: true, 
+                message: 'Nombre es requerido'
+                }, 
+            maxLength: {
+                value: 5, 
+                message: 'No más de 5 carácteres!'
+                },
+            minLength: {
+                value: 2, 
+                message: 'Mínimo 2 carácteres'
+                }
+        })
+    }
+/>
+```
+
+#### Errores
+[https://react-hook-form.com/advanced-usage#ErrorMessage](https://react-hook-form.com/advanced-usage#ErrorMessage)
+```html
+<span className="text-danger text-small d-block mb-2">
+    {errors.usuario && errors.usuario.message}
+</span>
+```
+
+```html
+<span className="text-danger text-small d-block mb-2">
+    {errors?.email?.message}
+</span>
+```
+[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+
+#### Limpiar campos (Reset)
+[https://codesandbox.io/s/jjm3wyqmjy](https://codesandbox.io/s/jjm3wyqmjy)
+```js
+const onSubmit = (data, e) => {
+    console.log(data)
+    
+    // limpiar campos
+    e.target.reset();
+}
+
+```
+
+#### Ejemplo #1
+```js
+
+import React, { Fragment, useState } from 'react';
+import { useForm } from 'react-hook-form';
+
+const FormCrud = () => {
+
+    const {register, errors, handleSubmit} = useForm();
+
+    const [entradas, setentradas] = useState([]);
+
+    const procesarFormulario = (data, e) => {
+        console.log(data);
+        setentradas([
+            ...entradas,
+            data
+        ])
+        // limpiar campos
+        e.target.reset();
+    }
+
+    return (
+        <Fragment>
+            <h1>FORM</h1>
+            <form onSubmit={handleSubmit(procesarFormulario)}>
+                <input
+                    name="titulo"
+                    ref={
+                        register({
+                            required: {value:true, message: 'Ingrese un nombre'}
+                        })
+                    }
+                    className="form-control my-2"
+                    placeholder="Ingrese título"
+                ></input>
+                <span className="text-danger text-small d-block mb-2">
+                    {errors?.titulo?.message}
+                </span>
+                <input
+                    name="descripcion"
+                    ref={
+                        register({
+                            required: {value:true, message: 'Ingrese descripción'}
+                        })
+                    }
+                    className="form-control my-2"
+                    placeholder="Ingrese descripción"
+                ></input>
+                <span className="text-danger text-small d-block mb-2">
+                    {errors?.descripcion?.message}
+                </span>
+                <button 
+                    type="submit" 
+                    className="btn btn-primary"
+                    >
+                Agregar
+                </button>
+            </form>
+            <ul className="mt-2">
+                {
+                    entradas.map((item, index) =>
+                        <li key={index}>
+                            {item.titulo} - {item.descripcion}
+                        </li>
+                    )
+                }
+            </ul>
+        </Fragment>
+    );
+}
+ 
+export default FormCrud;
+
+```
+
+
+
+
+
+
 
