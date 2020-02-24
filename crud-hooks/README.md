@@ -1,6 +1,13 @@
 # CRUD React Hooks
 No vamos a reinventar la rueda por lo tanto nos basaremos en el siguiente ejemplo: [https://www.taniarascia.com/crud-app-in-react-with-hooks/](https://www.taniarascia.com/crud-app-in-react-with-hooks/)
 
+::: warning Modificaremos las secciones de: 
+- Generar ID
+- Form Agregar usuario
+- Form Editar usuario
+:::
+El código completo aquí: [https://github.com/bluuweb/crud-react-user](https://github.com/bluuweb/crud-react-user)
+
 ## Configuraciones iniciales
 Ya hemos visto que para crear una App con React podemos utilizar el siguiente código:
 
