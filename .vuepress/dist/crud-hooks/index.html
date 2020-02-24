@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CRUD React Hooks | React Hooks</title>
+    <meta name="description" content="Aprende a utilizar React Hooks en tus proyectos web">
+    <meta name="generator" content="VuePress 1.3.0">
+    
+    
+    <link rel="preload" href="/react/assets/css/0.styles.c909feba.css" as="style"><link rel="preload" href="/react/assets/js/app.00ba9371.js" as="script"><link rel="preload" href="/react/assets/js/2.b23cf27d.js" as="script"><link rel="preload" href="/react/assets/js/7.1fbb385a.js" as="script"><link rel="prefetch" href="/react/assets/js/10.526d1ab0.js"><link rel="prefetch" href="/react/assets/js/11.1a2a9884.js"><link rel="prefetch" href="/react/assets/js/3.6186a69e.js"><link rel="prefetch" href="/react/assets/js/4.61e25d5f.js"><link rel="prefetch" href="/react/assets/js/5.71c827ac.js"><link rel="prefetch" href="/react/assets/js/6.313bbc6e.js"><link rel="prefetch" href="/react/assets/js/8.521ab357.js"><link rel="prefetch" href="/react/assets/js/9.567c641e.js">
+    <link rel="stylesheet" href="/react/assets/css/0.styles.c909feba.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/react/" class="home-link router-link-active"><!----> <span class="site-name">React Hooks</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/react/" class="nav-link">
+  Guía
+</a></div><div class="nav-item"><a href="https://youtube.com/bluuweb" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Youtube
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/react/" class="nav-link">
+  Guía
+</a></div><div class="nav-item"><a href="https://youtube.com/bluuweb" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Youtube
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/react/" class="sidebar-link">Introducción a React</a></li><li><a href="/react/hooks/" class="sidebar-link">Hooks Fundamentos</a></li><li><a href="/react/jsx/" class="sidebar-link">JSX</a></li><li><a href="/react/formularios/" class="sidebar-link">Formularios</a></li><li><a href="/react/components/" class="sidebar-link">Components</a></li><li><a href="/react/crud-hooks/" class="active sidebar-link">CRUD React Hooks</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/react/crud-hooks/#configuraciones-iniciales" class="sidebar-link">Configuraciones iniciales</a></li><li class="sidebar-sub-header"><a href="/react/crud-hooks/#instalaciones-adicionales" class="sidebar-link">Instalaciones adicionales</a></li><li class="sidebar-sub-header"><a href="/react/crud-hooks/#index-js" class="sidebar-link">index.js</a></li><li class="sidebar-sub-header"><a href="/react/crud-hooks/#index-css" class="sidebar-link">index.css</a></li><li class="sidebar-sub-header"><a href="/react/crud-hooks/#app-js" class="sidebar-link">App.js</a></li><li class="sidebar-sub-header"><a href="/react/crud-hooks/#agregar-usuario" class="sidebar-link">Agregar usuario</a></li><li class="sidebar-sub-header"><a href="/react/crud-hooks/#editar-usuario" class="sidebar-link">Editar usuario</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="crud-react-hooks"><a href="#crud-react-hooks" class="header-anchor">#</a> CRUD React Hooks</h1> <p>No vamos a reinventar la rueda por lo tanto nos basaremos en el siguiente ejemplo: <a href="https://www.taniarascia.com/crud-app-in-react-with-hooks/" target="_blank" rel="noopener noreferrer">https://www.taniarascia.com/crud-app-in-react-with-hooks/<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h2 id="configuraciones-iniciales"><a href="#configuraciones-iniciales" class="header-anchor">#</a> Configuraciones iniciales</h2> <p>Ya hemos visto que para crear una App con React podemos utilizar el siguiente código:</p> <div class="language- extra-class"><pre class="language-text"><code>npx create-react-app react-hooks
+</code></pre></div><p>Elimina todos los archivos a excepción de:</p> <div class="language- extra-class"><pre class="language-text"><code>app.js
+index.css
+index.js
+</code></pre></div><h2 id="instalaciones-adicionales"><a href="#instalaciones-adicionales" class="header-anchor">#</a> Instalaciones adicionales</h2> <p><a href="https://react-hook-form.com/get-started" target="_blank" rel="noopener noreferrer">https://react-hook-form.com/get-started<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <div class="language- extra-class"><pre class="language-text"><code>npm install react-hook-form
+</code></pre></div><p><a href="https://www.npmjs.com/package/uuid" target="_blank" rel="noopener noreferrer">https://www.npmjs.com/package/uuid<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <div class="language- extra-class"><pre class="language-text"><code>npm install uuid
+</code></pre></div><h2 id="index-js"><a href="#index-js" class="header-anchor">#</a> index.js</h2> <p>Déjalo como este:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> ReactDOM <span class="token keyword">from</span> <span class="token string">'react-dom'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'./index.css'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> App <span class="token keyword">from</span> <span class="token string">'./App'</span><span class="token punctuation">;</span>
+
+ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token operator">&lt;</span>App <span class="token operator">/</span><span class="token operator">&gt;</span><span class="token punctuation">,</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'root'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="index-css"><a href="#index-css" class="header-anchor">#</a> index.css</h2> <p>Copia y pega lo siguiente: <a href="https://taniarascia.github.io/primitive/css/main.css" target="_blank" rel="noopener noreferrer">https://taniarascia.github.io/primitive/css/main.css<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h2 id="app-js"><a href="#app-js" class="header-anchor">#</a> App.js</h2> <p>Ahora seguiremos el tutorial antes descrito pero modificando las secciones de: generar id, agregar usuario y editar (utilizaremos React Hook Form, tambien visto en los videos anteriores)</p> <h2 id="agregar-usuario"><a href="#agregar-usuario" class="header-anchor">#</a> Agregar usuario</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> useForm <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-hook-form'</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">AddUserForm</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">const</span> <span class="token punctuation">{</span>register<span class="token punctuation">,</span> errors<span class="token punctuation">,</span> handleSubmit<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">useForm</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">const</span> <span class="token function-variable function">onSubmit</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">data<span class="token punctuation">,</span> e</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        data<span class="token punctuation">.</span>id <span class="token operator">=</span> <span class="token keyword">null</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+        props<span class="token punctuation">.</span><span class="token function">addUser</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+        e<span class="token punctuation">.</span>target<span class="token punctuation">.</span><span class="token function">reset</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token operator">&lt;</span>form onSubmit<span class="token operator">=</span><span class="token punctuation">{</span><span class="token function">handleSubmit</span><span class="token punctuation">(</span>onSubmit<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>label<span class="token operator">&gt;</span>Name<span class="token operator">&lt;</span><span class="token operator">/</span>label<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>input 
+                type<span class="token operator">=</span><span class="token string">&quot;text&quot;</span> 
+                name<span class="token operator">=</span><span class="token string">&quot;name&quot;</span>
+                ref<span class="token operator">=</span><span class="token punctuation">{</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token punctuation">{</span>required<span class="token operator">:</span> <span class="token punctuation">{</span>value<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> message<span class="token operator">:</span> <span class="token string">'Valor requerido'</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+                <span class="token operator">/</span><span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+                <span class="token punctuation">{</span>errors<span class="token operator">?.</span>name<span class="token operator">?.</span>message<span class="token punctuation">}</span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>label<span class="token operator">&gt;</span>Username<span class="token operator">&lt;</span><span class="token operator">/</span>label<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>input 
+                type<span class="token operator">=</span><span class="token string">&quot;text&quot;</span> 
+                name<span class="token operator">=</span><span class="token string">&quot;username&quot;</span> 
+                ref<span class="token operator">=</span><span class="token punctuation">{</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token punctuation">{</span>required<span class="token operator">:</span> <span class="token punctuation">{</span>value<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> message<span class="token operator">:</span> <span class="token string">'Valor requerido'</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+                <span class="token operator">/</span><span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+                <span class="token punctuation">{</span>errors<span class="token operator">?.</span>username<span class="token operator">?.</span>message<span class="token punctuation">}</span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>button type<span class="token operator">=</span><span class="token string">&quot;submit&quot;</span><span class="token operator">&gt;</span>Add <span class="token keyword">new</span> <span class="token class-name">user</span><span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>form<span class="token operator">&gt;</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+ 
+<span class="token keyword">export</span> <span class="token keyword">default</span> AddUserForm<span class="token punctuation">;</span>
+</code></pre></div><h2 id="editar-usuario"><a href="#editar-usuario" class="header-anchor">#</a> Editar usuario</h2> <p>App.js</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span>useState<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> UserTable <span class="token keyword">from</span> <span class="token string">'./components/UserTable'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> AddUserForm <span class="token keyword">from</span> <span class="token string">'./components/AddUserForm'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> EditYo <span class="token keyword">from</span> <span class="token string">'./components/EditYo'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> v4 <span class="token keyword">as</span> uuidv4 <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'uuid'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token comment">// Agregar usuarios</span>
+  <span class="token keyword">const</span> usersData <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span> id<span class="token operator">:</span> <span class="token function">uuidv4</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> name<span class="token operator">:</span> <span class="token string">'Tania'</span><span class="token punctuation">,</span> username<span class="token operator">:</span> <span class="token string">'floppydiskette'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span> id<span class="token operator">:</span> <span class="token function">uuidv4</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> name<span class="token operator">:</span> <span class="token string">'Craig'</span><span class="token punctuation">,</span> username<span class="token operator">:</span> <span class="token string">'siliconeidolon'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span> id<span class="token operator">:</span> <span class="token function">uuidv4</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> name<span class="token operator">:</span> <span class="token string">'Ben'</span><span class="token punctuation">,</span> username<span class="token operator">:</span> <span class="token string">'benisphere'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span>
+
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>users<span class="token punctuation">,</span> setUsers<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span>usersData<span class="token punctuation">)</span>
+
+  <span class="token keyword">const</span> <span class="token function-variable function">addUser</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">user</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    user<span class="token punctuation">.</span>id <span class="token operator">=</span> <span class="token function">uuidv4</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span>
+    <span class="token function">setUsers</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+      <span class="token operator">...</span>users<span class="token punctuation">,</span>
+      user
+    <span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// Eliminar usuario</span>
+  <span class="token keyword">const</span> <span class="token function-variable function">deleteUser</span> <span class="token operator">=</span> <span class="token parameter">id</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token function">setUsers</span><span class="token punctuation">(</span>users<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token parameter">user</span> <span class="token operator">=&gt;</span> user<span class="token punctuation">.</span>id <span class="token operator">!==</span> id<span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// Editar usuario</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>editing<span class="token punctuation">,</span> setEditing<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span>
+
+  <span class="token keyword">const</span> initialFormState <span class="token operator">=</span> <span class="token punctuation">{</span> id<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span> name<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span> username<span class="token operator">:</span> <span class="token string">''</span> <span class="token punctuation">}</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>currentUser<span class="token punctuation">,</span> setCurrentUser<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span>initialFormState<span class="token punctuation">)</span>
+
+  <span class="token keyword">const</span> <span class="token function-variable function">editRow</span> <span class="token operator">=</span> <span class="token parameter">user</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token function">setEditing</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span> 
+    <span class="token function">setCurrentUser</span><span class="token punctuation">(</span><span class="token punctuation">{</span> id<span class="token operator">:</span> user<span class="token punctuation">.</span>id<span class="token punctuation">,</span> name<span class="token operator">:</span> user<span class="token punctuation">.</span>name<span class="token punctuation">,</span> username<span class="token operator">:</span> user<span class="token punctuation">.</span>username <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">const</span> <span class="token function-variable function">updateUser</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">id<span class="token punctuation">,</span> updatedUser</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token function">setEditing</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span>
+    <span class="token function">setUsers</span><span class="token punctuation">(</span>users<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">user</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>user<span class="token punctuation">.</span>id <span class="token operator">===</span> id <span class="token operator">?</span> updatedUser <span class="token operator">:</span> user<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">&quot;container&quot;</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>h1<span class="token operator">&gt;</span><span class="token constant">CRUD</span> App <span class="token keyword">with</span> Hooks<span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">&quot;flex-row&quot;</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">&quot;flex-large&quot;</span><span class="token operator">&gt;</span>
+        <span class="token punctuation">{</span>editing <span class="token operator">?</span> <span class="token punctuation">(</span>
+          <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>h2<span class="token operator">&gt;</span>Edit user<span class="token operator">&lt;</span><span class="token operator">/</span>h2<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>EditYo 
+              setEditing<span class="token operator">=</span><span class="token punctuation">{</span>setEditing<span class="token punctuation">}</span>
+              currentUser<span class="token operator">=</span><span class="token punctuation">{</span>currentUser<span class="token punctuation">}</span>
+              updateUser<span class="token operator">=</span><span class="token punctuation">{</span>updateUser<span class="token punctuation">}</span>
+            <span class="token operator">/</span><span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+        <span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token punctuation">(</span>
+          <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>h2<span class="token operator">&gt;</span>Add user<span class="token operator">&lt;</span><span class="token operator">/</span>h2<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>AddUserForm addUser<span class="token operator">=</span><span class="token punctuation">{</span>addUser<span class="token punctuation">}</span>  <span class="token operator">/</span><span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+        <span class="token punctuation">)</span><span class="token punctuation">}</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">&quot;flex-large&quot;</span><span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>h2<span class="token operator">&gt;</span>View users<span class="token operator">&lt;</span><span class="token operator">/</span>h2<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>UserTable users<span class="token operator">=</span><span class="token punctuation">{</span>users<span class="token punctuation">}</span> deleteUser<span class="token operator">=</span><span class="token punctuation">{</span>deleteUser<span class="token punctuation">}</span> editRow<span class="token operator">=</span><span class="token punctuation">{</span>editRow<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span>
+</code></pre></div><p>EditUserForm.jsx</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> useForm <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-hook-form'</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">EditYo</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">const</span> <span class="token punctuation">{</span>register<span class="token punctuation">,</span> errors<span class="token punctuation">,</span> handleSubmit<span class="token punctuation">,</span> setValue<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">useForm</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        defaultValues<span class="token operator">:</span> props<span class="token punctuation">.</span>currentUser
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">setValue</span><span class="token punctuation">(</span><span class="token string">'name'</span><span class="token punctuation">,</span> props<span class="token punctuation">.</span>currentUser<span class="token punctuation">.</span>name<span class="token punctuation">)</span>
+    <span class="token function">setValue</span><span class="token punctuation">(</span><span class="token string">'username'</span><span class="token punctuation">,</span> props<span class="token punctuation">.</span>currentUser<span class="token punctuation">.</span>username<span class="token punctuation">)</span>
+
+    <span class="token keyword">const</span> <span class="token function-variable function">onSubmit</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">data<span class="token punctuation">,</span> e</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        data<span class="token punctuation">.</span>id <span class="token operator">=</span> props<span class="token punctuation">.</span>currentUser<span class="token punctuation">.</span>id
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+        props<span class="token punctuation">.</span><span class="token function">updateUser</span><span class="token punctuation">(</span>props<span class="token punctuation">.</span>currentUser<span class="token punctuation">.</span>id<span class="token punctuation">,</span> data<span class="token punctuation">)</span>
+        e<span class="token punctuation">.</span>target<span class="token punctuation">.</span><span class="token function">reset</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token operator">&lt;</span>form onSubmit<span class="token operator">=</span><span class="token punctuation">{</span><span class="token function">handleSubmit</span><span class="token punctuation">(</span>onSubmit<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>label<span class="token operator">&gt;</span>Name<span class="token operator">&lt;</span><span class="token operator">/</span>label<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>input 
+                type<span class="token operator">=</span><span class="token string">&quot;text&quot;</span> 
+                name<span class="token operator">=</span><span class="token string">&quot;name&quot;</span>
+                ref<span class="token operator">=</span><span class="token punctuation">{</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token punctuation">{</span>required<span class="token operator">:</span> <span class="token punctuation">{</span>value<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> message<span class="token operator">:</span> <span class="token string">'Valor requerido'</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+                <span class="token operator">/</span><span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+                <span class="token punctuation">{</span>errors<span class="token operator">?.</span>name<span class="token operator">?.</span>message<span class="token punctuation">}</span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>label<span class="token operator">&gt;</span>Username<span class="token operator">&lt;</span><span class="token operator">/</span>label<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>input 
+                type<span class="token operator">=</span><span class="token string">&quot;text&quot;</span> 
+                name<span class="token operator">=</span><span class="token string">&quot;username&quot;</span> 
+                ref<span class="token operator">=</span><span class="token punctuation">{</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token punctuation">{</span>required<span class="token operator">:</span> <span class="token punctuation">{</span>value<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> message<span class="token operator">:</span> <span class="token string">'Valor requerido'</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+                <span class="token operator">/</span><span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+                <span class="token punctuation">{</span>errors<span class="token operator">?.</span>username<span class="token operator">?.</span>message<span class="token punctuation">}</span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>button type<span class="token operator">=</span><span class="token string">&quot;submit&quot;</span><span class="token operator">&gt;</span>Edit user<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>button onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> props<span class="token punctuation">.</span><span class="token function">setEditing</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">}</span> className<span class="token operator">=</span><span class="token string">&quot;button muted-button&quot;</span><span class="token operator">&gt;</span>
+                Cancel
+            <span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>form<span class="token operator">&gt;</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+ 
+<span class="token keyword">export</span> <span class="token keyword">default</span> EditYo<span class="token punctuation">;</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/react/components/" class="prev">
+        Components
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/react/assets/js/app.00ba9371.js" defer></script><script src="/react/assets/js/2.b23cf27d.js" defer></script><script src="/react/assets/js/7.1fbb385a.js" defer></script>
+  </body>
+</html>

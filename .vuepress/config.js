@@ -20,6 +20,7 @@ module.exports = {
         '/jsx/',
         '/formularios/',
         '/components/',
+        '/crud-hooks/'
       ]
   }
  
